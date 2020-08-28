@@ -147,24 +147,28 @@ $title magpie
 *##################### R SECTION START (VERSION INFO) ##########################
 * 
 * Used data set: isimip_rcp-IPSL_CM5A_LR-rcp2p6-co2_rev46_c200_690d3718e151be1b450b394c1064b1c5.tgz
-* md5sum: NA
-* Repository: https://rse.pik-potsdam.de/data/magpie/intern
+* md5sum: c240d77907008c2fb0a6e156c1024d23
+* Repository: /p/projects/rd3mod/mirror/rse.pik-potsdam.de/data/magpie/intern
 * 
 * Used data set: rev4.47_h12_magpie.tgz
-* md5sum: NA
-* Repository: https://rse.pik-potsdam.de/data/magpie/intern
+* md5sum: 7435c0e5fa4d2c94f4bc1ebdc516e25f
+* Repository: /p/projects/rd3mod/mirror/rse.pik-potsdam.de/data/magpie/intern
 * 
 * Used data set: rev4.47_h12_validation.tgz
-* md5sum: NA
-* Repository: https://rse.pik-potsdam.de/data/magpie/intern
+* md5sum: bf43d9b00ca445d616fa2a7509d629e5
+* Repository: /p/projects/rd3mod/mirror/rse.pik-potsdam.de/data/magpie/intern
 * 
 * Used data set: calibration_H12_c200_26Feb20.tgz
-* md5sum: NA
-* Repository: https://rse.pik-potsdam.de/data/magpie/public
+* md5sum: 0fc75955deb5916d4ac078e8d817feda
+* Repository: /p/projects/rd3mod/mirror/rse.pik-potsdam.de/data/magpie/intern
 * 
 * Used data set: additional_data_rev3.85.tgz
-* md5sum: NA
-* Repository: https://rse.pik-potsdam.de/data/magpie/intern
+* md5sum: 23bc2b7ff07da84b798d741c3d2ad3d2
+* Repository: /p/projects/rd3mod/mirror/rse.pik-potsdam.de/data/magpie/intern
+* 
+* Used data set: traveldistancemodel.tgz
+* md5sum: 485a9b39b7f250ff1bbb4c521cf73b3c
+* Repository: /p/projects/rd3mod/mirror/rse.pik-potsdam.de/data/magpie/intern
 * 
 * Low resolution: c200
 * High resolution: 0.5
@@ -197,7 +201,7 @@ $title magpie
 * 
 * 
 * 
-* Last modification (input data): Fri Aug 28 12:41:38 2020
+* Last modification (input data): Fri Aug 28 13:35:12 2020
 * 
 *###################### R SECTION END (VERSION INFO) ###########################
 

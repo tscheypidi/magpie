@@ -10,7 +10,9 @@ p40_distance("y1995",j) = f40_distance(j);
 $onecho > traveldistance.R
 library(gdx)
 library(traveldistance)
-model    <- readRDS("modules/40_transport/input/model.rds")
+
+modelpath <- ifelse(file.exists("model.rds"),"model.rds","modules/40_transport/input/model.rds")
+model    <- readRDS(modelpath)
 pcm_land <- readGDX("traveldistanceOut.gdx","pcm_land", restore_zeros = FALSE)
 pcm_land <- as.data.frame(as.array(pcm_land)[,,])
 pcm_land[is.na(pcm_land)] <- 0
