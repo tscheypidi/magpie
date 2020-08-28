@@ -18,6 +18,7 @@
 *' @authors Jan Philipp Dietrich, Florian Humpenöder, Benjamin Bodirsky, Isabelle Weindl, Michael Krause.
 
 *###################### R SECTION START (MODULETYPES) ##########################
+$Ifi "%transport%" == "dynamic" $include "./modules/40_transport/dynamic/realization.gms"
 $Ifi "%transport%" == "gtap_nov12" $include "./modules/40_transport/gtap_nov12/realization.gms"
 $Ifi "%transport%" == "off" $include "./modules/40_transport/off/realization.gms"
 *###################### R SECTION END (MODULETYPES) ############################
