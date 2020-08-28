@@ -6,6 +6,8 @@
 *** |  Contact: magpie@pik-potsdam.de
 
 
-execute_unload  'traveldistanceOut.gdx', p40_distance, pcm_land, ct;
+execute_unload  'traveldistanceOut.gdx', pc40_distance, pcm_land;
 execute 'Rscript traveldistance.R';
-execute_load 'traveldistanceIn.gdx', p40_distance;
+execute_load 'traveldistanceIn.gdx', pc40_distance;
+
+p40_distance(t,j) = pc40_distance(j);

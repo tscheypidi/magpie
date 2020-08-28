@@ -5,7 +5,7 @@
 *** |  MAgPIE License Exception, version 1.0 (see LICENSE file).
 *** |  Contact: magpie@pik-potsdam.de
 
-p40_distance("y1995",j) = f40_distance(j);
+pc40_distance(j) = f40_distance(j);
 
 $onecho > traveldistance.R
 library(gdx)
@@ -18,9 +18,8 @@ pcm_land <- as.data.frame(as.array(pcm_land)[,,])
 pcm_land[is.na(pcm_land)] <- 0
 prediction   <- predict(model, newdata = pcm_land)
 
-p40_distance <- readGDX("traveldistanceOut.gdx","p40_distance", restore_zeros = FALSE)
-ct           <- readGDX("traveldistanceOut.gdx","ct")
-p40_distance[,ct,1] <- prediction
-writeGDX(p40_distance,"traveldistanceIn.gdx")
+pc40_distance <- readGDX("traveldistanceOut.gdx","pc40_distance", restore_zeros = FALSE)
+pc40_distance[,1,1] <- prediction
+writeGDX(pc40_distance,"traveldistanceIn.gdx")
 
 $offecho

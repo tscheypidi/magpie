@@ -15,6 +15,7 @@ variables
 
 parameters
  p40_distance(t,j)        Transport distance to urban center (min)
+ pc40_distance(j)        current transport distance to urban center (min)
 ;
 
 *#################### R SECTION START (OUTPUT DECLARATIONS) ####################
