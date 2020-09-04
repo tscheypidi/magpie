@@ -11,8 +11,9 @@ $onecho > traveldistance.R
 library(gdx)
 library(traveldistance)
 
-modelpath <- ifelse(file.exists("model.rds"),"model.rds","modules/40_transport/input/model.rds")
-model    <- readRDS(modelpath)
+modelpath <- ifelse(file.exists("modeldata.rda"),"modeldata.rda","modules/40_transport/input/modeldata.rda")
+model <- data <- NULL
+load(modelpath)
 pcm_land <- readGDX("traveldistanceOut.gdx","pcm_land", restore_zeros = FALSE)
 pcm_land <- as.data.frame(as.array(pcm_land)[,,])
 pcm_land[is.na(pcm_land)] <- 0
