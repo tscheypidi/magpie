@@ -45,8 +45,8 @@ library(madrat)
 .getland_hr <- function(land,land_ini,map) {
   require(luscale)
   land_hr <- luscale::interpolate2(x = land, x_ini = land_ini, map = map)
-  write.magpie(land_hr,)
-  return(land_hr,"pcm_land_hr.mz")
+  write.magpie(land_hr,"pcm_land_hr.mz")
+  return(land_hr)
 }
 
 .enhance_prediction <- function(prediction, base_prediction, reference) {

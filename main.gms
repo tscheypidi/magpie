@@ -158,16 +158,16 @@ $title magpie
 * md5sum: bf43d9b00ca445d616fa2a7509d629e5
 * Repository: /p/projects/rd3mod/mirror/rse.pik-potsdam.de/data/magpie/intern
 * 
+* Used data set: rev4.47_h12_accessibilitymodel.tgz
+* md5sum: 8a012a81f33190c39220e7356f88f842
+* Repository: /p/projects/rd3mod/inputdata/output
+* 
 * Used data set: calibration_H12_c200_26Feb20.tgz
 * md5sum: 0fc75955deb5916d4ac078e8d817feda
 * Repository: /p/projects/rd3mod/mirror/rse.pik-potsdam.de/data/magpie/intern
 * 
 * Used data set: additional_data_rev3.85.tgz
 * md5sum: 23bc2b7ff07da84b798d741c3d2ad3d2
-* Repository: /p/projects/rd3mod/mirror/rse.pik-potsdam.de/data/magpie/intern
-* 
-* Used data set: traveldistancemodel.tgz
-* md5sum: 485a9b39b7f250ff1bbb4c521cf73b3c
 * Repository: /p/projects/rd3mod/mirror/rse.pik-potsdam.de/data/magpie/intern
 * 
 * Low resolution: c200
@@ -201,7 +201,7 @@ $title magpie
 * 
 * 
 * 
-* Last modification (input data): Fri Aug 28 13:35:12 2020
+* Last modification (input data): Thu Sep 17 15:57:52 2020
 * 
 *###################### R SECTION END (VERSION INFO) ###########################
 
@@ -227,7 +227,7 @@ $offlisting
 
 $setglobal c_timesteps  coup2100
 $setglobal c_past  till_2010
-$setglobal c_title  default
+$setglobal c_title  accessibility
 
 scalars
 s_use_gdx   use of gdx files                                       / 2 /
