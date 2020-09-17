@@ -1,4 +1,4 @@
 * list of files that are required here
 transport_distance.cs2
 f40_transport_costs.csv
-modeldata.rda
+accessibilitymodel.rds
