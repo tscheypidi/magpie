@@ -19,14 +19,17 @@ if(!exists("source_include")) {
   readArgs("outputdir")
 }
 
+load(path(outputdir,"config.Rdata"))
 gdx <- path(outputdir,"fulldata.gdx")
 rel <- Sys.glob(path(outputdir,"*_sum.spam"))
-ofile <- path(outputdir,"travel_distance.nc")
+ofile <- path(outputdir,paste0("accessibility_cluster_",cfg$title,".nc"))
 ###############################################################################
 
-td <- readGDX(gdx,"p40_distance")
-td_hr <- speed_aggregate(td,rel)
-getNames(td_hr) <- "travel distance"
-write.magpie(td_hr,ofile)
+copy.magpie(path(outputdir,"accessibilityprediction.mz"),
+            path(outputdir,paste0("accessibility_cell_",cfg$title,".nc"))) 
 
+td    <- readGDX(gdx,"p40_distance")
+td_hr <- speed_aggregate(td,rel)
+getNames(td_hr) <- "accessibility_cluster"
+write.magpie(td_hr,ofile)
 
