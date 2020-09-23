@@ -5,31 +5,27 @@
 # |  MAgPIE License Exception, version 1.0 (see LICENSE file).
 # |  Contact: magpie@pik-potsdam.de
 
+# ----------------------------------------------------------
+# description: testing dynamic transport distances
+# ----------------------------------------------------------
 
 ######################################
 #### Script to start a MAgPIE run ####
 ######################################
 
-library(gms)
-library(magclass)
-
 # Load start_run(cfg) function which is needed to start MAgPIE runs
 source("scripts/start_functions.R")
 
-#start MAgPIE runs
+#start MAgPIE run
 source("config/default.cfg")
 
-cfg$force_download <- TRUE
+cfg$title <- "access_default"
+cfg$gms$transport <- "dynamic" 
+cfg$gms$factor_costs <- "mixed_feb17" 
+start_run(cfg)
 
-#cfg$results_folder <- "output/:title:"
-cfg$results_folder <- "output/:title::date:"
+cfg$title <- "access_sticky"
+cfg$gms$transport <- "dynamic" 
+cfg$gms$factor_costs <- "sticky_feb18" 
+start_run(cfg)
 
-
-cfg$title <- "R2M41_SSP1"
-cfg <- gms::setScenario(cfg,c("SSP1"))
-start_run(cfg,codeCheck=FALSE)
-
-
-cfg$title <- "R2M41_SDP"
-cfg <- gms::setScenario(cfg,c("SDP"))
-start_run(cfg,codeCheck=FALSE)

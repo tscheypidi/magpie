@@ -146,29 +146,29 @@ $title magpie
 
 *##################### R SECTION START (VERSION INFO) ##########################
 * 
-* Used data set: isimip_rcp-IPSL_CM5A_LR-rcp2p6-co2_rev46_c200_690d3718e151be1b450b394c1064b1c5.tgz
-* md5sum: NA
-* Repository: https://rse.pik-potsdam.de/data/magpie/public
+* Used data set: isimip_rcp-IPSL_CM5A_LR-rcp2p6-co2_rev48_c200_690d3718e151be1b450b394c1064b1c5.tgz
+* md5sum: b07787909a9339225fd097c813277b19
+* Repository: /p/projects/rd3mod/mirror/rse.pik-potsdam.de/data/magpie/public
 * 
-* Used data set: rev4.47_h12_magpie.tgz
-* md5sum: NA
-* Repository: https://rse.pik-potsdam.de/data/magpie/public
+* Used data set: rev4.52_h12_magpie.tgz
+* md5sum: ce9bbfce986710544de877569f8d0303
+* Repository: /p/projects/rd3mod/mirror/rse.pik-potsdam.de/data/magpie/public
 * 
-* Used data set: rev4.47_h12_validation.tgz
-* md5sum: NA
-* Repository: https://rse.pik-potsdam.de/data/magpie/public
+* Used data set: rev4.52_h12_validation.tgz
+* md5sum: c60823c216ad4500568b83c1ef6fc006
+* Repository: /p/projects/rd3mod/mirror/rse.pik-potsdam.de/data/magpie/public
 * 
 * Used data set: rev4.47_h12_accessibilitymodel.tgz
-* md5sum: NA
-* Repository: https://rse.pik-potsdam.de/data/magpie/intern
+* md5sum: 8a012a81f33190c39220e7356f88f842
+* Repository: /p/projects/rd3mod/mirror/rse.pik-potsdam.de/data/magpie/intern
 * 
 * Used data set: calibration_H12_c200_26Feb20.tgz
-* md5sum: NA
-* Repository: https://rse.pik-potsdam.de/data/magpie/public
+* md5sum: 0fc75955deb5916d4ac078e8d817feda
+* Repository: /p/projects/rd3mod/mirror/rse.pik-potsdam.de/data/magpie/intern
 * 
-* Used data set: additional_data_rev3.85.tgz
-* md5sum: NA
-* Repository: https://rse.pik-potsdam.de/data/magpie/public
+* Used data set: additional_data_rev3.86.tgz
+* md5sum: 38c9de23c5d1d22d8b99caee92b25342
+* Repository: /p/projects/rd3mod/mirror/rse.pik-potsdam.de/data/magpie/public
 * 
 * Low resolution: c200
 * High resolution: 0.5
@@ -181,19 +181,19 @@ $title magpie
 * 
 * Regionscode: 690d3718e151be1b450b394c1064b1c5
 * 
-* Regions data revision: 4.47
+* Regions data revision: 4.52
 * 
 * lpj2magpie settings:
 * * LPJmL data folder: /p/projects/landuse/data/input/lpj_input/isimip_rcp/IPSL_CM5A_LR/rcp2p6/co2
-* * Additional input folder: /p/projects/landuse/data/input/other/rev46
-* * Revision: 46
+* * Additional input folder: /p/projects/landuse/data/input/other/rev48
+* * Revision: 48
 * * Call: lpj2magpie(input_folder = path(cfg$lpj_input_folder, gsub("-",     "/", cfg$input)), input2_folder = path(cfg$additional_input_folder,     paste("rev", floor(cfg$revision), sep = "")), output_file = lpj2magpie_file,     rev = cfg$revision)
 * 
 * aggregation settings:
 * * Input resolution: 0.5
 * * Output resolution: c200
-* * Input file: /p/projects/landuse/data/input/archive/isimip_rcp-IPSL_CM5A_LR-rcp2p6-co2_rev46_0.5.tgz
-* * Output file: /p/projects/landuse/data/input/archive/isimip_rcp-IPSL_CM5A_LR-rcp2p6-co2_rev46_c200_690d3718e151be1b450b394c1064b1c5.tgz
+* * Input file: /p/projects/landuse/data/input/archive/isimip_rcp-IPSL_CM5A_LR-rcp2p6-co2_rev48_0.5.tgz
+* * Output file: /p/projects/landuse/data/input/archive/isimip_rcp-IPSL_CM5A_LR-rcp2p6-co2_rev48_c200_690d3718e151be1b450b394c1064b1c5.tgz
 * * Regionscode: 690d3718e151be1b450b394c1064b1c5
 * * (clustering) n-repeat: 5
 * * (clustering) n-redistribute: 0
@@ -201,7 +201,7 @@ $title magpie
 * 
 * 
 * 
-* Last modification (input data): Fri Sep 18 14:02:40 2020
+* Last modification (input data): Wed Sep 23 10:50:07 2020
 * 
 *###################### R SECTION END (VERSION INFO) ###########################
 
@@ -227,7 +227,7 @@ $offlisting
 
 $setglobal c_timesteps  coup2100
 $setglobal c_past  till_2010
-$setglobal c_title  accessibility
+$setglobal c_title  access_sticky
 
 scalars
 s_use_gdx   use of gdx files                                       / 2 /
@@ -260,7 +260,7 @@ $setglobal forestry  dynamic_may20
 $setglobal urban  static
 $setglobal natveg  dynamic_may20
 
-$setglobal factor_costs  mixed_feb17
+$setglobal factor_costs  sticky_feb18
 $setglobal landconversion  global_static_aug18
 
 $setglobal transport  dynamic
