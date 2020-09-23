@@ -146,6 +146,7 @@ $title magpie
 
 *##################### R SECTION START (VERSION INFO) ##########################
 * 
+<<<<<<< HEAD
 * Used data set: isimip_rcp-IPSL_CM5A_LR-rcp2p6-co2_rev46_c200_690d3718e151be1b450b394c1064b1c5.tgz
 * md5sum: NA
 * Repository: https://rse.pik-potsdam.de/data/magpie/public
@@ -162,11 +163,29 @@ $title magpie
 * md5sum: NA
 * Repository: https://rse.pik-potsdam.de/data/magpie/intern
 * 
+=======
+* Used data set: isimip_rcp-IPSL_CM5A_LR-rcp2p6-co2_rev48_c200_690d3718e151be1b450b394c1064b1c5.tgz
+* md5sum: NA
+* Repository: https://rse.pik-potsdam.de/data/magpie/public
+* 
+* Used data set: rev4.52_h12_magpie.tgz
+* md5sum: NA
+* Repository: https://rse.pik-potsdam.de/data/magpie/public
+* 
+* Used data set: rev4.52_h12_validation.tgz
+* md5sum: NA
+* Repository: https://rse.pik-potsdam.de/data/magpie/public
+* 
+>>>>>>> 774babbdbafa4a9e277d39592184d7778c59ae6f
 * Used data set: calibration_H12_c200_26Feb20.tgz
 * md5sum: NA
 * Repository: https://rse.pik-potsdam.de/data/magpie/public
 * 
+<<<<<<< HEAD
 * Used data set: additional_data_rev3.85.tgz
+=======
+* Used data set: additional_data_rev3.86.tgz
+>>>>>>> 774babbdbafa4a9e277d39592184d7778c59ae6f
 * md5sum: NA
 * Repository: https://rse.pik-potsdam.de/data/magpie/public
 * 
@@ -181,19 +200,33 @@ $title magpie
 * 
 * Regionscode: 690d3718e151be1b450b394c1064b1c5
 * 
+<<<<<<< HEAD
 * Regions data revision: 4.47
 * 
 * lpj2magpie settings:
 * * LPJmL data folder: /p/projects/landuse/data/input/lpj_input/isimip_rcp/IPSL_CM5A_LR/rcp2p6/co2
 * * Additional input folder: /p/projects/landuse/data/input/other/rev46
 * * Revision: 46
+=======
+* Regions data revision: 4.52
+* 
+* lpj2magpie settings:
+* * LPJmL data folder: /p/projects/landuse/data/input/lpj_input/isimip_rcp/IPSL_CM5A_LR/rcp2p6/co2
+* * Additional input folder: /p/projects/landuse/data/input/other/rev48
+* * Revision: 48
+>>>>>>> 774babbdbafa4a9e277d39592184d7778c59ae6f
 * * Call: lpj2magpie(input_folder = path(cfg$lpj_input_folder, gsub("-",     "/", cfg$input)), input2_folder = path(cfg$additional_input_folder,     paste("rev", floor(cfg$revision), sep = "")), output_file = lpj2magpie_file,     rev = cfg$revision)
 * 
 * aggregation settings:
 * * Input resolution: 0.5
 * * Output resolution: c200
+<<<<<<< HEAD
 * * Input file: /p/projects/landuse/data/input/archive/isimip_rcp-IPSL_CM5A_LR-rcp2p6-co2_rev46_0.5.tgz
 * * Output file: /p/projects/landuse/data/input/archive/isimip_rcp-IPSL_CM5A_LR-rcp2p6-co2_rev46_c200_690d3718e151be1b450b394c1064b1c5.tgz
+=======
+* * Input file: /p/projects/landuse/data/input/archive/isimip_rcp-IPSL_CM5A_LR-rcp2p6-co2_rev48_0.5.tgz
+* * Output file: /p/projects/landuse/data/input/archive/isimip_rcp-IPSL_CM5A_LR-rcp2p6-co2_rev48_c200_690d3718e151be1b450b394c1064b1c5.tgz
+>>>>>>> 774babbdbafa4a9e277d39592184d7778c59ae6f
 * * Regionscode: 690d3718e151be1b450b394c1064b1c5
 * * (clustering) n-repeat: 5
 * * (clustering) n-redistribute: 0
@@ -201,7 +234,11 @@ $title magpie
 * 
 * 
 * 
+<<<<<<< HEAD
 * Last modification (input data): Fri Sep 18 14:02:40 2020
+=======
+* Last modification (input data): Tue Sep 15 13:45:32 2020
+>>>>>>> 774babbdbafa4a9e277d39592184d7778c59ae6f
 * 
 *###################### R SECTION END (VERSION INFO) ###########################
 
