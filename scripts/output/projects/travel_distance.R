@@ -18,18 +18,33 @@ if(!exists("source_include")) {
   outputdir <- "."
   readArgs("outputdir")
 }
-
-load(path(outputdir,"config.Rdata"))
-gdx <- path(outputdir,"fulldata.gdx")
-rel <- Sys.glob(path(outputdir,"*_sum.spam"))
-ofile <- path(outputdir,paste0("accessibility_cluster_",cfg$title,".nc"))
 ###############################################################################
 
-copy.magpie(path(outputdir,"accessibilityprediction.mz"),
-            path(outputdir,paste0("accessibility_cell_",cfg$title,".nc"))) 
-
-td    <- readGDX(gdx,"p40_distance")
-td_hr <- speed_aggregate(td,rel)
-getNames(td_hr) <- "accessibility_cluster"
-write.magpie(td_hr,ofile)
-
+reportAccessibility <- function(outputdir) {
+  cwd <- getwd()
+  on.exit(setwd(cwd))
+  setwd(outputdir)
+  
+  load("config.Rdata")
+  gdx <- "fulldata.gdx"
+  rel <- Sys.glob("*_sum.spam")
+  a <- read.magpie("accessibilityprediction.mz")
+  m <- readRDS("accessibilitymodel.rds")
+  
+  mdata <- as.magpie(m$data[c("distance","prediction")])
+  mdata <- mdata[,rep(1,nyears(a)),]
+  getYears(mdata) <- getYears(a)
+  getNames(mdata) <- paste0(getNames(mdata),2015)
+  getNames(a) <- sub(".","_",getNames(a),fixed=TRUE)
+  
+  td    <- readGDX(gdx,"p40_distance")
+  td_hr <- speed_aggregate(td,rel)
+  getCells(td_hr) <- getCells(a)
+  getNames(td_hr) <- "prediction_cluster"
+  
+  out <- mbind(mdata,a,td_hr)
+  
+  write.magpie(out, paste0("accessibility_cell_",cfg$title,".nc"))
+  write.magpie(out, paste0("accessibility_cell_",cfg$title,".mz"))
+}
+reportAccessibility(outputdir)
