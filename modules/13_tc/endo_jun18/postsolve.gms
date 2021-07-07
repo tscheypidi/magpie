@@ -1,4 +1,4 @@
-*** |  (C) 2008-2020 Potsdam Institute for Climate Impact Research (PIK)
+*** |  (C) 2008-2021 Potsdam Institute for Climate Impact Research (PIK)
 *** |  authors, and contributors see CITATION.cff file. This file is part
 *** |  of MAgPIE and licensed under AGPL-3.0-or-later. Under Section 7 of
 *** |  AGPL-3.0, you are granted additional permissions described in the
@@ -8,10 +8,10 @@
 * Overall TC cost for the current timestep
 
 if((ord(t)>1),
- pc13_tcguess(i) = (vm_tau.l(i)/pc13_tau(i))**(1/m_yeardiff(t)) - 1;
+ pc13_tcguess(i) = (vm_tau.l(i)/pcm_tau(i))**(1/m_yeardiff(t)) - 1;
 );
 
-pc13_tau(i) = vm_tau.l(i);
+pcm_tau(i) = vm_tau.l(i);
 
 
 *#################### R SECTION START (OUTPUT DEFINITIONS) #####################

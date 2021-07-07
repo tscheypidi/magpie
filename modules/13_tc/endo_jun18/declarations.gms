@@ -1,4 +1,4 @@
-*** |  (C) 2008-2020 Potsdam Institute for Climate Impact Research (PIK)
+*** |  (C) 2008-2021 Potsdam Institute for Climate Impact Research (PIK)
 *** |  authors, and contributors see CITATION.cff file. This file is part
 *** |  of MAgPIE and licensed under AGPL-3.0-or-later. Under Section 7 of
 *** |  AGPL-3.0, you are granted additional permissions described in the
@@ -18,7 +18,7 @@ equations
 
 parameters
  pc13_land(i)                Crop land area per region (mio ha)
- pc13_tau(i)                 Tau factor of the previous time step (1)
+ pcm_tau(i)                  Tau factor of the previous time step (1)
  pc13_tcguess(i)             Guess for annual tc rates in the next time step (1)
  i13_tc_factor(t,i)          Regression factor (USD05PPP per ha)
  i13_tc_exponent(t,i)        Regression exponent (1)
